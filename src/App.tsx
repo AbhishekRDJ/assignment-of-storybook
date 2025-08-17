@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { DataTable } from './components/DataTable/DataTable'
 import { InputField } from './components/InputField/InputField'
 import type { Column } from './components/DataTable/DataTable.types'
+import { getStorybookUrl } from './config/urls'
 import './App.css'
 
 // Sample data for the DataTable
@@ -177,12 +178,20 @@ function App() {
           </p>
           <div className="space-x-4 mt-4">
             <a
-              href="http://localhost:6006"
+              href={getStorybookUrl()}
               target="_blank"
               rel="noreferrer"
               className="font-medium text-blue-600 hover:text-blue-800"
             >
               View Storybook →
+            </a>
+            <a
+              href="https://github.com/AbhishekRDJ/assignment-of-storybook"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-gray-600 hover:text-gray-800"
+            >
+              View Source Code →
             </a>
           </div>
         </div>
