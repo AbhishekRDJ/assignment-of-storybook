@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta, type StoryObj } from '@storybook/react';
 import { InputField } from './InputField';
 
 const meta: Meta<typeof InputField> = {
@@ -19,7 +19,7 @@ const meta: Meta<typeof InputField> = {
     },
     variant: {
       control: { type: 'select' },
-      options: ['default', 'error', 'success'],
+      options: ['default', 'outlined', 'filled'],
     },
   },
 };
@@ -48,7 +48,7 @@ export const WithError: Story = {
     label: 'Password',
     type: 'password',
     placeholder: 'Enter password',
-    error: 'Password is required',
+    errorMessage: 'Password is required',
   },
 };
 
@@ -58,7 +58,7 @@ export const WithSuccess: Story = {
     type: 'email',
     placeholder: 'Enter email',
     value: 'valid@email.com',
-    variant: 'success',
+    variant: 'outlined',
   },
 };
 

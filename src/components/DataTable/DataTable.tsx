@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { DataTableProps, SortConfig } from './DataTable.types';
+import { useState, useMemo } from 'react';
+import type { DataTableProps, SortConfig } from './DataTable.types';
 import clsx from 'clsx';
 
 export function DataTable<T extends Record<string, unknown>>({

@@ -1,17 +1,16 @@
-import React from "react";
 import { type Meta, type StoryObj } from "@storybook/react-vite";
 import { DataTable } from "./DataTable";
 import type { Column } from "./DataTable.types";
 
 type Row = { id: string; name: string; email: string; age: number; role?: string };
 
-const meta: Meta<typeof DataTable> = {
+const meta: Meta<typeof DataTable<Row>> = {
     title: "Components/DataTable",
-    component: DataTable,
+    component: DataTable<Row>,
     tags: ["autodocs"],
 };
 export default meta;
-type Story = StoryObj<typeof DataTable>;
+type Story = StoryObj<typeof DataTable<Row>>;
 
 const columns: Column<Row>[] = [
     { key: "name", label: "Name", sortable: true },
@@ -20,7 +19,7 @@ const columns: Column<Row>[] = [
     {
         key: "role",
         label: "Role",
-        render: (value, row) => <span className="text-gray-600 text-sm">{value ?? "—"}</span>,
+        render: (value) => <span className="text-gray-600 text-sm">{value ?? "—"}</span>,
     },
 ];
 
