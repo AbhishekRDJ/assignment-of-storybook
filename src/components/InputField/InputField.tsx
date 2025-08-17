@@ -1,11 +1,5 @@
-import React, {
-    forwardRef,
-    useId,
-    useState,
-    useEffect,
-    type InputHTMLAttributes,
-} from "react";
-import clsx from "clsx";
+import { useState, forwardRef, useId, useEffect, type InputHTMLAttributes } from 'react';
+import clsx from 'clsx';
 
 /**
  * Production-ready InputField
